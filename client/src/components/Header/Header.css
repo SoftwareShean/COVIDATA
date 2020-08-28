@@ -1,0 +1,20 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 95%;
+    max-height: 20%;
+    margin-bottom: 7%;
+}
+
+header h1 {
+    font-family: "Bowlby One SC", cursive;
+    color: #c20114;
+    margin: 0;
+    margin-left: 2%;
+}
+
+header img {
+    position: relative;
+    top: 0;
+    left: 0;
+}

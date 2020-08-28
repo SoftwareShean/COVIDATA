@@ -1,0 +1,7 @@
+.nationalHeader {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  max-width: 95%;
+  max-height: 30vh;
+}
