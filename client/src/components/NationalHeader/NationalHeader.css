@@ -2,6 +2,35 @@
   display: flex;
   align-self: center;
   flex-direction: column;
-  max-width: 95%;
-  max-height: 30vh;
+  max-height: fit-content;
+}
+
+.nationalHeader h1 {
+    margin: 0;
+}
+
+span {
+    /* display: flex; */
+    color: #c20114;
+    /* align-self: flex-end; */
+    justify-content: center;
+}
+
+.totalCases, .totalMortality {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2%;
+    /* border: 1px solid black; */
+    border-radius: 50px;
+    margin: 1%;
+    background: rgb(235, 227, 227);
+    padding: 5%;
+    margin-bottom: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+  .nationalHeader h1 {
+    font-size: 1em;
+  }
 }

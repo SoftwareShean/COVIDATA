@@ -1,11 +1,12 @@
 .App {
-  display: flex;
+  margin: 0 auto;
   /* justify-content: center; */
   /* align-content: center; */
   flex-direction: column;
   width: inherit;
   height: inherit;
   background: #c7d6d5;
+  width: 100%;
 }
 
 body {
@@ -18,5 +19,46 @@ body {
   box-shadow: 20px 20px 60px #a9b6b5, -20px -20px 60px #e5f6f5;
   margin-bottom: 5%;
   padding: 2%;
+  height: fit-content;
 }
 
+svg {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  .App {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .App {
+    width: 70%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .left {
+    width: 50%;
+    margin: 2%;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 2%;
+    margin-top: 2%;
+  }
+
+}

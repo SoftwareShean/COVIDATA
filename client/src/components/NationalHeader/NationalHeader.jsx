@@ -10,7 +10,6 @@ export default class NationalHeader extends Component {
             total: nationalData[0].total,
             death: nationalData[0].death
         })
-        console.log(nationalData)
     }
     state = {
         total: '',
@@ -21,8 +20,8 @@ export default class NationalHeader extends Component {
         return (
           <div>
             <div className='nationalHeader component'>
-                    <h1>Total US Cases {total}</h1>
-                    <h1>Total US Mortality {death}</h1>
+                    <div className="totalCases"><h1>Total US Cases:</h1><h1><span>{total}</span></h1></div>
+                    <div className="totalMortality"><h1>Total US Mortality:</h1><h1><span>{death}</span></h1></div>
             </div>
           </div>
         );
