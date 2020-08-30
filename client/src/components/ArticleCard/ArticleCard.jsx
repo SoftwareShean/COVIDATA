@@ -19,13 +19,15 @@ export default class ArticleCard extends Component {
   render() {
     const { data } = this.props;
     return (
-        <a target="_blank" href={data.url}><div className='article'>
-        <img src={data.urlToImage} alt={data.description} />
-        <div className='articleData'>
-          <h4>{data.title}</h4>
-          <h6>{data.author}</h6>
+      <a target='_blank' rel='noopener noreferrer' href={data.url}>
+        <div className='article'>
+          <img src={data.urlToImage} alt={data.description} />
+          <div className='articleData'>
+            <h4>{data.title}</h4>
+            <h6>{data.author}</h6>
+          </div>
         </div>
-      </div></a>
+      </a>
     );
   }
 }

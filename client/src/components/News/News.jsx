@@ -7,7 +7,6 @@ export default class News extends Component {
     async componentDidMount() {
         let topStories = await newsDisplay();
         this.setState({ topStories: topStories })
-        console.log(this.state.topStories)
     }
 
     state = {
@@ -21,7 +20,7 @@ export default class News extends Component {
         <h1>Top News</h1>
         <div className='carosel'>
                 {topStories &&
-                    topStories.map((article) => (<ArticleCard data={article}/>))
+                    topStories.map((article) => (<ArticleCard data={article} key={article.title}/>))
                 }
         </div>
       </div>
