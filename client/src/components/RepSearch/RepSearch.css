@@ -1,0 +1,13 @@
+.search {
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+}
+
+.search input {
+    width: 97%;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid black;
+    padding-left: 1%;
+}

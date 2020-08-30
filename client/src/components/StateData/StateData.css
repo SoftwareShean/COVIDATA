@@ -1,0 +1,12 @@
+.stateData {
+    padding: 3%;
+}
+
+select {
+    padding: 1%;
+    margin: 1%;
+    width: 95%;
+    border: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+}
