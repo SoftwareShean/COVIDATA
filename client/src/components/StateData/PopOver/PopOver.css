@@ -48,14 +48,15 @@
 .stateOutline {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  height: fit-content;
+  height: 90%;
   margin-bottom: 10%;
 }
 
 .stateOutline img {
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.4;
 }
 
 .stateInfo {
