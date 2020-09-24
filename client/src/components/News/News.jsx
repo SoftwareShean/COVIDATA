@@ -20,7 +20,7 @@ export default class News extends Component {
         <div className='carosel'>
           {articles &&
             articles.map((article) => (
-              <ArticleCard data={article} key={article.title} />
+              <ArticleCard articleData={article} key={article.title} />
             ))}
         </div>
       </div>

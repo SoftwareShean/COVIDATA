@@ -7,6 +7,8 @@ export default class PopOver extends Component {
   state = {
     state: Number,
     data: {},
+    minus: false,
+    plus: false,
   };
 
   componentDidMount() {
@@ -16,16 +18,57 @@ export default class PopOver extends Component {
     });
   }
 
+  componentDidUpdate = async (prevProps) => {
+    // let previousStateData = this.setPreviousStateIndex();
+    // this.setState({
+    //   data: previousStateData,
+    //   minus: false,
+    // });
+    //   let nextStateData = this.setSubsequentStateIndex();
+    //   this.setState({
+    //       data: nextStateData, 
+    //       plus: false
+    //   })
+  };
+
   setStateIndex = () => {
     let stateIndex = this.props.data;
+    this.setState({
+      state: stateIndex,
+    });
     let data = stateArray(stateIndex);
     return data;
   };
 
-  setImageURLString = () => {
-    let imageURL = this.state.data.outline;
-    return toString(imageURL);
-  };
+//   setPreviousStateIndex = () => {
+//     this.setState({
+//       minus: true,
+//     });
+//     let previousState = this.state.state - 1;
+//     console.log(previousState);
+//     let previousStateData = stateArray(previousState);
+//     console.log(previousStateData);
+//     return previousStateData;
+//   };
+
+//   setSubsequentStateIndex = () => {
+//     let nextState = this.state.state + 1;
+//     console.log(nextState);
+//     let nextStateData = stateArray(nextState);
+//     console.log(nextStateData);
+//     return nextStateData;
+//   };
+
+//   renderPreviousStateData = () => {
+//     if (this.state.minus) {
+//       let previousState = this.state.state - 1;
+//       console.log(previousState);
+//       let previousStateData = stateArray(previousState);
+//       console.log(previousStateData);
+//       return previousStateData;
+//     } 
+//   };
+
   render() {
     const { data } = this.state;
     const { currentData, render } = this.props;
@@ -39,12 +82,12 @@ export default class PopOver extends Component {
               </button>
             </div>
             <div className='statePopOverHeader'>
-              <button>
+              <button onClick={this.setPreviousStateIndex}>
                 <FaAngleLeft />
               </button>
               <h1>{data.state}</h1>
               <button>
-                <FaAngleRight />
+                <FaAngleRight onClick={this.setSubsequentStateIndex} />
               </button>
             </div>
             <div className='currentStateData'>
@@ -58,7 +101,7 @@ export default class PopOver extends Component {
                 </h1>
                 <h1>
                   Positive Cases: <br />
-                  {currentData.positive == 0 || null ? (
+                  {currentData.positive === 0 || null ? (
                     <span>0</span>
                   ) : (
                     <span>{currentData.positive.toLocaleString()}</span>
@@ -66,7 +109,7 @@ export default class PopOver extends Component {
                 </h1>
                 <h1>
                   Total Deaths: <br />
-                  {currentData.death == 0 || null ? (
+                  {currentData.death === 0 || null ? (
                     <span>0</span>
                   ) : (
                     <span>{currentData.death.toLocaleString()}</span>
