@@ -3,6 +3,7 @@
   align-self: center;
   flex-direction: column;
   max-height: fit-content;
+  box-shadow: inset 20px 20px 60px #a9b6b5;
 }
 
 .nationalHeader h1 {
@@ -10,9 +11,7 @@
 }
 
 span {
-    /* display: flex; */
     color: #c20114;
-    /* align-self: flex-end; */
     justify-content: center;
 }
 
@@ -21,7 +20,6 @@ span {
     flex-direction: row;
     justify-content: space-between;
     padding: 2%;
-    /* border: 1px solid black; */
     border-radius: 50px;
     margin: 1%;
     background: rgb(235, 227, 227);

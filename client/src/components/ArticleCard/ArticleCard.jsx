@@ -12,7 +12,6 @@ export default class ArticleCard extends Component {
       article: this.props.data.article, 
       articleImage: articleImage
     });
-    console.log(this.state.article)
   };
 
   componentDidMount() {

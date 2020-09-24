@@ -5,14 +5,7 @@ export const stateData = async () => {
   try {
     const response = await axios.get(stateUrl);
     let stateList = response;
-    console.log(stateList);
-    // stateList.forEach( (obj, index) => {
-    //   const option = document.createElement('option')
-    //   option.value = index
-    //   option.className = obj.state
-    //   option.text = `${img[index].state}`
-    //   select.append(option)
-    // })
+    return stateList
   } catch (error) {
     alert(`Err. ${error}`);
   }

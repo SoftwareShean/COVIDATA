@@ -10,15 +10,11 @@ export default class NationalHeader extends Component {
     }
     async componentDidMount() {
         let nationalData = await getNationalData();
-        console.log(nationalData)
-        let totalDeaths = nationalData[0].death
-        let totalCases = nationalData[0].positive
-        let totalDeathsFormatted = totalDeaths.toLocaleString()
-        let totalPositiveFormatted = totalCases.toLocaleString()
-        console.log(totalDeathsFormatted)
+        let totalDeaths = nationalData[0].death.toLocaleString();
+        let totalCases = nationalData[0].positive.toLocaleString()
         this.setState({
-            total: totalPositiveFormatted,
-            death: totalDeathsFormatted
+            total: totalCases,
+            death: totalDeaths
         })
     }
 

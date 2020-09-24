@@ -5,3 +5,7 @@
     overflow-x: scroll;
     padding: 1% 0%;
 }
+
+.news h1 { 
+    margin-bottom: 0;
+}
