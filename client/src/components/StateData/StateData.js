@@ -4,7 +4,7 @@ export const stateData = async () => {
   const stateUrl = `https://api.covidtracking.com/v1/states/current.json`;
   try {
     const response = await axios.get(stateUrl);
-    let stateList = response;
+    let stateList = response.data;
     return stateList
   } catch (error) {
     alert(`Err. ${error}`);

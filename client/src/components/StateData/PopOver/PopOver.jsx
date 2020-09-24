@@ -8,6 +8,7 @@ export default class PopOver extends Component {
     state: Number,
     data: {},
   };
+
   componentDidMount() {
     let dataInfo = this.setStateIndex();
     this.setState({
@@ -26,13 +27,14 @@ export default class PopOver extends Component {
     return toString(imageURL);
   };
   render() {
-    const { image } = this.state;
+    const { data } = this.state;
+    const { currentData, render } = this.props;
     return (
       <>
         {this.state.data && (
           <div className='statePopOver component'>
             <div className='popOverCloseButton'>
-              <button onClick={this.props.render}>
+              <button onClick={render}>
                 <FaTimes />
               </button>
             </div>
@@ -40,18 +42,51 @@ export default class PopOver extends Component {
               <button>
                 <FaAngleLeft />
               </button>
-              <h1>{this.state.data.state}</h1>
+              <h1>{data.state}</h1>
               <button>
                 <FaAngleRight />
               </button>
             </div>
-            <div
-              className='stateOutline'
-            >
-              <img src={this.state.data.outline} />
-            </div>
-            <div className='stateInfo'>
-              <h1>{this.state.data.governor}</h1>
+            <div className='currentStateData'>
+              <div className='stateOutline'>
+                <img src={data.outline} alt='state outline' />
+              </div>
+              <div className='stateInfo'>
+                <h1>
+                  Governor: <br />
+                  {data.governor}
+                </h1>
+                <h1>
+                  Positive Cases: <br />
+                  {currentData.positive == 0 || null ? (
+                    <span>0</span>
+                  ) : (
+                    <span>{currentData.positive.toLocaleString()}</span>
+                  )}
+                </h1>
+                <h1>
+                  Total Deaths: <br />
+                  {currentData.death == 0 || null ? (
+                    <span>0</span>
+                  ) : (
+                    <span>{currentData.death.toLocaleString()}</span>
+                  )}
+                </h1>
+                <h1>
+                  Hospitalized Currently: <br />
+                  {currentData.hospitalizedCurrently === 0 || null ? (
+                    <span>0</span>
+                  ) : (
+                    <span>
+                      {currentData.hospitalizedCurrently.toLocaleString()}
+                    </span>
+                  )}
+                </h1>
+                <h4>
+                  Last Updated:
+                  <span>{this.props.currentData.lastUpdateEt}</span>
+                </h4>
+              </div>
             </div>
           </div>
         )}
