@@ -6,18 +6,16 @@ import PopOver from "./PopOver/PopOver.jsx";
 export default class StateData extends Component {
   state = {
     selections: "",
-    selectValue: null,
+    selectValue: '',
     render: false,
   };
 
   async componentDidMount() {
     let selections = await stateData();
-    this.setState({ selections: selections.data });
-    console.log(this.state.selections)
+    this.setState({ selections: selections });
   }
 
   handleDropdownChange = async (e) => {
-    let selection = e.target.value;
     this.setState({ selectValue: e.target.value, render: true });
   };
 
@@ -38,7 +36,7 @@ export default class StateData extends Component {
           value={this.state.selectValue}
           onChange={this.handleDropdownChange}
         >
-          <option selectValue='STATES'>STATES</option>
+          <option selectvalue='STATES'>STATES</option>
           {selections &&
             selections.map((state, index) => (
               <option key={state.state} value={index} name={state.state}>
@@ -47,7 +45,7 @@ export default class StateData extends Component {
             ))}
         </select>
         {render ? (
-          <PopOver data={this.state.selectValue} render={this.handlePopOver} />
+          <PopOver data={this.state.selectValue} render={this.handlePopOver} currentData={this.state.selections[this.state.selectValue]} />
         ) : (
           <></>
         )}

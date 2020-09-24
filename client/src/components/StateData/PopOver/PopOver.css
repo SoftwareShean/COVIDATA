@@ -17,7 +17,7 @@
     top: 15%;
     left: 8%;
     width: 80%;
-    height: 70%;
+    height: 50%;
   }
 
   .statePopOverHeader {
@@ -28,6 +28,7 @@
   }
 
   .statePopOverHeader h1 {
+      font-size: 1.5rem;
     margin: 0;
   }
 
@@ -37,6 +38,37 @@
     background-color: transparent;
     border: none;
     outline: none;
+  }
+
+  .currentStateData {
+      height: 85%;
+      width: 100%;
+  }
+
+  .stateOutline {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: fit-content;
+        margin-bottom: 10%;
+  }
+
+  .stateOutline img {
+      width: 100%;
+      opacity: .8;
+  }
+
+  .stateInfo {
+      width: 88%;
+      padding: 1rem;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+  }
+
+  .stateInfo h1 {
+      font-size: 1.5rem;
+
   }
 
 @media only screen and (min-width: 1440px) {

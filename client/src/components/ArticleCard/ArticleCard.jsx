@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import "./ArticleCard.css";
-import "../../assets/IMG/AK.png";
+import './ArticleCard.css'
 
 export default class ArticleCard extends Component {
   state = {
