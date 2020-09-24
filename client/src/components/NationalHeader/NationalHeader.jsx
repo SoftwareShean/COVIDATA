@@ -4,17 +4,25 @@ import {getNationalData} from './NationalHeader.js'
 
 
 export default class NationalHeader extends Component {
-    async componentDidMount() {
-        let nationalData = await getNationalData();
-        this.setState({
-            total: nationalData[0].total,
-            death: nationalData[0].death
-        })
-    }
     state = {
         total: '',
         death: ''
     }
+    async componentDidMount() {
+        let nationalData = await getNationalData();
+        console.log(nationalData)
+        let totalDeaths = nationalData[0].death
+        let totalCases = nationalData[0].positive
+        let totalDeathsFormatted = totalDeaths.toLocaleString()
+        let totalPositiveFormatted = totalCases.toLocaleString()
+        console.log(totalDeathsFormatted)
+        this.setState({
+            total: totalPositiveFormatted,
+            death: totalDeathsFormatted
+        })
+    }
+
+
     render() {
         const {total, death} = this.state
         return (

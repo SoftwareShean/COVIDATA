@@ -10,7 +10,6 @@ export default class News extends Component {
   
   async componentDidMount() {
     let topStories = await newsDisplay();
-    console.log(topStories)
     this.setState({ articles: topStories })
     console.log(this.state.articles)
     }

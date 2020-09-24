@@ -7,10 +7,12 @@ export default class ArticleCard extends Component {
       article: ""
   };
   setFormData = () => {
+    let articleImage = this.props.data.multimedia[0].url
     this.setState({
-        article: this.props.data.article
-        // key: this.props.data.article.title
+      article: this.props.data.article, 
+      articleImage: articleImage
     });
+    console.log(this.state.article)
   };
 
   componentDidMount() {
@@ -21,7 +23,7 @@ export default class ArticleCard extends Component {
     return (
       <a target='_blank' rel='noopener noreferrer' href={data.url}>
         <div className='article'>
-          <img src={data.urlToImage} alt={data.description} />
+          <img src={this.state.articleImage} alt={data.description} />
           <div className='articleData'>
             <h4>{data.title}</h4>
             <h6>{data.author}</h6>
