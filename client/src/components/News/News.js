@@ -1,12 +1,10 @@
-import axios from 'axios'
+import axios from "axios";
 
 export const newsDisplay = async () => {
-    const newsUrl = `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=covid&apiKey=f5abcb1acb1942188a4163e71207fab5`;
-    try {
-        const response = await axios.get(newsUrl)
-        let nationalNews = response.data.articles
-        return nationalNews
-    } catch(error) {
-        alert(`Err. ${error}`)
-    }
-}
+  let key = process.env.REACT_APP_NEWS_WIDGET_API_TOKEN;
+  const response = await axios.get(
+    `https://api.nytimes.com/svc/topstories/v2/us.json?api-key=${key}`
+  );
+  let articles = response.data.results;
+  return articles
+};

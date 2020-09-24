@@ -1,7 +1,5 @@
 .App {
   margin: 0 auto;
-  /* justify-content: center; */
-  /* align-content: center; */
   flex-direction: column;
   width: inherit;
   height: inherit;
