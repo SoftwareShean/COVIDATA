@@ -1,75 +1,74 @@
-  .popOverCloseButton {
-    width: 100%;
-  }
+.popOverCloseButton {
+  width: 100%;
+}
 
-  .popOverCloseButton button {
-    position: relative;
-    top: 10%;
-    left: 88%;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    height: 50px;
-  }
+.popOverCloseButton button {
+  position: relative;
+  top: 10%;
+  left: 88%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 50px;
+}
 
-  .statePopOver {
-    position: fixed;
-    top: 15%;
-    left: 8%;
-    width: 80%;
-    height: 50%;
-  }
+.statePopOver {
+  position: fixed;
+  top: 15%;
+  left: 8%;
+  width: 80%;
+  height: 70%;
+}
 
-  .statePopOverHeader {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+.statePopOverHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
-  .statePopOverHeader h1 {
-      font-size: 1.5rem;
-    margin: 0;
-  }
+.statePopOverHeader h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
 
-  .statePopOverHeader button {
-    pointer-events: cursor;
-    height: 50px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-  }
+.statePopOverHeader button {
+  pointer-events: cursor;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
 
-  .currentStateData {
-      height: 85%;
-      width: 100%;
-  }
+.currentStateData {
+  height: 85%;
+  width: 100%;
+}
 
-  .stateOutline {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      height: fit-content;
-        margin-bottom: 10%;
-  }
+.stateOutline {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 10%;
+}
 
-  .stateOutline img {
-      width: 100%;
-      opacity: .8;
-  }
+.stateOutline img {
+  width: 100%;
+  opacity: 0.8;
+}
 
-  .stateInfo {
-      width: 88%;
-      padding: 1rem;
-      position: absolute;
-      top: 20%;
-      left: 10%;
-  }
+.stateInfo {
+  width: 88%;
+  padding: 1rem;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
 
-  .stateInfo h1 {
-      font-size: 1.5rem;
-
-  }
+.stateInfo h1 {
+  font-size: 1.5rem;
+}
 
 @media only screen and (min-width: 1440px) {
   .popOverCloseButton {
@@ -84,14 +83,31 @@
     top: 25%;
     left: 18%;
     width: 60%;
-    height: 50%;
+    height: 60%;
   }
 
   .statePopOverHeader h1 {
     margin: 0;
   }
+
 }
 
 @media only screen and (min-width: 768px) {
+      .currentStateData {
+    display: flex;
+    flex-direction: row;
+  }
 
+  .stateOutline {
+    align-self: center;
+    width: 50%;
+    max-height: 80%;
+  }
+
+  .stateInfo {
+    width: 50%;
+    position: relative;
+    top: 20%;
+    left: 10%;
+  }
 }
