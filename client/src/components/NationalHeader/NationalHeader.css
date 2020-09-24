@@ -7,24 +7,26 @@
 }
 
 .nationalHeader h1 {
-    margin: 0;
+  margin: 0;
 }
 
 span {
-    color: #c20114;
-    justify-content: center;
+  color: #c20114;
+  justify-content: center;
 }
 
-.totalCases, .totalMortality {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2%;
-    border-radius: 50px;
-    margin: 1%;
-    background: rgb(235, 227, 227);
-    padding: 5%;
-    margin-bottom: 2%;
+.totalCases,
+.totalMortality {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2%;
+  border-radius: 50px;
+  margin: 1%;
+  background: rgb(235, 227, 227);
+  padding: 5%;
+  margin-bottom: 2%;
+  box-shadow: 20px 20px 60px #a9b6b5;
 }
 
 @media only screen and (max-width: 768px) {

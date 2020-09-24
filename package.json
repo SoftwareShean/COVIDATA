@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/sheanj/COVIDATA/issues"
   },
-  "homepage": "https://github.com/sheanj/COVIDATA#readme"
+  "homepage": "https://github.com/sheanj/COVIDATA#readme",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "react-font-awesome": "^1.0.3",
+    "react-icons": "^3.11.0"
+  }
 }

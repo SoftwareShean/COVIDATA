@@ -1,7 +1,65 @@
-.statePopOver {
+  .popOverCloseButton {
+    width: 100%;
+  }
+
+  .popOverCloseButton button {
+    position: relative;
+    top: 10%;
+    left: 88%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 50px;
+  }
+
+  .statePopOver {
     position: fixed;
+    top: 15%;
+    left: 8%;
+    width: 80%;
+    height: 70%;
+  }
+
+  .statePopOverHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .statePopOverHeader h1 {
+    margin: 0;
+  }
+
+  .statePopOverHeader button {
+    pointer-events: cursor;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+@media only screen and (min-width: 1440px) {
+  .popOverCloseButton {
+    width: 100%;
+  }
+
+  .popOverCloseButton button {
+    left: 97%;
+  }
+
+  .statePopOver {
     top: 25%;
-    left: 25%;
-    width: 50%;
+    left: 18%;
+    width: 60%;
     height: 50%;
+  }
+
+  .statePopOverHeader h1 {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
 }

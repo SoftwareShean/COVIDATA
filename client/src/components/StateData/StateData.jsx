@@ -13,6 +13,7 @@ export default class StateData extends Component {
   async componentDidMount() {
     let selections = await stateData();
     this.setState({ selections: selections.data });
+    console.log(this.state.selections)
   }
 
   handleDropdownChange = async (e) => {
@@ -39,8 +40,8 @@ export default class StateData extends Component {
         >
           <option selectValue='STATES'>STATES</option>
           {selections &&
-            selections.map((state) => (
-              <option key={state.state} value={state.state} name={state.state}>
+            selections.map((state, index) => (
+              <option key={state.state} value={index} name={state.state}>
                 {state.state}
               </option>
             ))}
