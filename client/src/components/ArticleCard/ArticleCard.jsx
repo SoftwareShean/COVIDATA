@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./ArticleCard.css";
+import Spinner from 'react-bootstrap/Spinner'
 
 export default class ArticleCard extends Component {
   state = {
@@ -54,7 +55,7 @@ export default class ArticleCard extends Component {
             </div>
           </a>
         ) : (
-          <></>
+          <Spinner animation='grow' />
         )}
       </>
     );

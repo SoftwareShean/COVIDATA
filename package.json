@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/sheanj/COVIDATA#readme",
   "dependencies": {
+    "bootstrap": "^4.5.2",
     "font-awesome": "^4.7.0",
+    "react-bootstrap": "^1.3.0",
     "react-font-awesome": "^1.0.3",
     "react-icons": "^3.11.0"
   }

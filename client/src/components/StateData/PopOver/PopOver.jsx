@@ -16,6 +16,7 @@ export default class PopOver extends Component {
     this.setState({
       data: dataInfo,
     });
+      console.log(this.state.data)
   }
 
   componentDidUpdate = async (prevProps) => {
