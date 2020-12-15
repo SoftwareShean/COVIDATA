@@ -2,6 +2,8 @@
 
 ## COVIDATA-19
 
+[View the deployed application here](https://covidata19.netlify.app/)
+
 ## Project Description
 
 COVIDATA19 is an online resource for centralized updates on the Coronavirus pandemic. Data is categorized by state, listing the most recently updated infection rate (IR), as well as the current fatalities. 

@@ -5,7 +5,7 @@ import { getRepresentatives } from "./RepSearch.js";
 
 export default class RepSearch extends Component {
   state = {
-  senators: ''
+  senators: []
 }
 
   searchResults = async (e) => {
@@ -13,11 +13,11 @@ export default class RepSearch extends Component {
     if (search.length >= 2) {
       let senatorArray = []
       let senators = await getRepresentatives(search);
+      console.log([...senators])
       senatorArray.push(senators)
       this.setState({
-        senators: [senatorArray]
+        senators: [...senatorArray]
       })
-      console.log(senators)
     }
   };
   render() {

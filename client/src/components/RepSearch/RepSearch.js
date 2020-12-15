@@ -11,13 +11,18 @@ export const getRepresentatives = async (search) => {
         const response = await axios.get(urlSen, config)
         let senResponse = response.data.results[0].members
         let senators = [...senResponse]
-        const searchLoop = () => {
+        const searchLoop = (error) => {
             const bothSenators = [];
             for (let i = 0; i <= senators.length; i++) {
                 if (senators[i].state === search) {
-                    return senators[i]
-                }
+                    console.log(senators[i])
+                    bothSenators.push(senators[i])
+                } else if (senators[i].state === undefined) {
+                    return console.log('something has gone wrong here')
+                } 
             }
+            console.log(typeof bothSenators)
+            return bothSenators
         }
         let result = searchLoop()
         console.log('this is the result' + result)
